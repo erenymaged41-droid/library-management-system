@@ -1,46 +1,42 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>كتالوج الكتب</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library System - Catalog</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h2>كتالوج المكتبة</h2>
-
-    <div>
-        <input type="text" id="searchInput" placeholder="ابحث باسم الكتاب أو المؤلف...">
-    </div>
-    <br>
-
-    <div id="booksGrid">
-        
-        <div class="book-card">
-            <h3 class="book-title">مقدمة في لغة بايثون</h3>
-            <p>المؤلف: <span class="book-author">أحمد محمود</span></p>
-            <p>النسخ المتاحة: 3</p>
-            <button>استعارة</button>
-        </div>
-        <hr>
-
-        <div class="book-card">
-            <h3 class="book-title">تعلم إطار عمل جانجو</h3>
-            <p>المؤلف: <span class="book-author">سارة علي</span></p>
-            <p>النسخ المتاحة: 0</p>
-            <button disabled>غير متاح</button>
-        </div>
-        <hr>
-
-        <div class="book-card">
-            <h3 class="book-title">أساسيات الجافاسكريبت</h3>
-            <p>المؤلف: <span class="book-author">محمد حسن</span></p>
-            <p>النسخ المتاحة: 5</p>
-            <button>استعارة</button>
-        </div>
-
+  <div class="container">
+    <h2>Library Catalog</h2>
+    
+    <div class="search-section">
+      <input type="text" id="searchInput" placeholder="Search by book title or author...">
     </div>
 
-    <script src="main.js"></script>
+    <div id="booksGrid" class="books-grid">
+      <div class="book-card">
+        <h3 class="book-title">Clean Code</h3>
+        <p class="book-author">By Robert C. Martin</p>
+        <button class="borrow-btn">Borrow</button>
+      </div>
+
+      <div class="book-card">
+        <h3 class="book-title">The Pragmatic Programmer</h3>
+        <p class="book-author">By Andrew Hunt</p>
+        <button class="borrow-btn">Borrow</button>
+      </div>
+
+      <div class="book-card">
+        <h3 class="book-title">JavaScript: The Good Parts</h3>
+        <p class="book-author">By Douglas Crockford</p>
+        <button class="borrow-btn">Borrow</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
 </body>
-</html>
+                                             </html>
+                                             
