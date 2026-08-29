@@ -1,0 +1,130 @@
+/* style.css - Library System Layout & Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f6f9;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.error-msg {
+  color: #e74c3c;
+  font-size: 12px;
+  display: block;
+  margin-top: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Search Section */
+.search-section {
+  margin-bottom: 25px;
+}
+
+.search-section input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+/* Books Grid */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.book-card {
+  background: #fafafa;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.book-title {
+  font-size: 16px;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.book-author {
+  font-size: 13px;
+  color: #7f8c8d;
+  margin-bottom: 12px;
+}
+
+.borrow-btn {
+  padding: 8px 15px;
+  font-size: 13px;
+  background-color: #2ecc71;
+}
+
+.borrow-btn:hover {
+  background-color: #27ae60;
+}
