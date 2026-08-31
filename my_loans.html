@@ -5,14 +5,95 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>استعاراتي - مكتبة رُفُوف</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* إصلاح الهيدر والـ Navbar لتنسيق مثالي */
+    .navbar {
+      background-color: #FDFBF7;
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid #E8DEC8;
+    }
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #4A3525;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    .nav-links a.active {
+      color: #2D7D56;
+    }
+    
+    /* تنسيق الكارت والزر */
+    .my-loans-container {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .loan-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+      border: 1px solid #E8DEC8;
+    }
+    .book-title {
+      color: #2D251E;
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    .book-author {
+      color: #7A6855;
+      font-size: 0.95rem;
+      margin-bottom: 0.75rem;
+    }
+    .return-date {
+      color: #E74C3C;
+      font-size: 0.9rem;
+      margin-bottom: 1.25rem;
+    }
+    .btn-return {
+      background-color: #E74C3C;
+      color: #ffffff;
+      border: none;
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    .btn-return:hover {
+      background-color: #C0392B;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Navbar -->
+  <!-- Navbar المضبوط بالكامل -->
   <nav class="navbar">
     <div class="nav-container">
-      <div class="logo">
-        <svg width="55" height="55" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <div class="logo-container">
+        <svg width="48" height="48" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="80" cy="70" r="45" fill="#E8DEC8"/>
           <rect x="35" y="42" width="90" height="6" rx="3" fill="#8C533E"/>
           <rect x="35" y="92" width="90" height="7" rx="3" fill="#8C533E"/>
@@ -28,43 +109,38 @@
           <rect x="102" y="48" width="10" height="44" rx="2" fill="#E76F51"/>
         </svg>
 
-        <div style="display: flex; flex-direction: column; align-items: flex-start; line-height: 1.1;">
-          <span style="color: #4A3525; font-weight: bold; font-size: 1.3rem;">رُفُوف</span>
-          <span style="color: #7A6855; font-size: 0.65rem; font-weight: 500;">مكتبتك في مكان واحد</span>
+        <div style="display: flex; flex-direction: column; text-align: right;">
+          <span style="color: #4A3525; font-weight: bold; font-size: 1.2rem; line-height: 1;">رُفُوف</span>
+          <span style="color: #7A6855; font-size: 0.65rem; font-weight: 500; margin-top: 3px;">مكتبتك في مكان واحد</span>
         </div>
       </div>
       
       <ul class="nav-links">
         <li><a href="catalog.html">الكتالوج</a></li>
-        <li><a href="my_loans.html">استعاراتي</a></li>
+        <li><a href="my_loans.html" class="active">استعاراتي</a></li>
         <li><a href="signup.html">تسجيل الدخول</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Main Container -->
-  <main class="container">
-    <div class="catalog-header" style="text-align: center; margin-bottom: 2rem;">
-      <h2 style="color: #4A3525;">قائمة الكتب المستعارة</h2>
+  <!-- Main Content -->
+  <main class="my-loans-container">
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <h2 style="color: #4A3525; font-size: 1.5rem;">قائمة الكتب المستعارة</h2>
     </div>
 
-    <!-- عرض الكتاب بالزر المنسق باللون الأحمر/البرتقالي المميز -->
-    <div class="books-grid">
-      <div class="book-card">
-        <div>
-          <h3 class="book-title">لأنك الله (الجزء الأول والثاني)</h3>
-          <p class="book-author">المؤلف: علي جابر الفيفي</p>
-          <p class="return-date" style="color: #e74c3c; font-size: 0.85rem; margin-bottom: 1.2rem;">تاريخ الإرجاع: 15 سبتمبر 2026</p>
-        </div>
-        <button style="background-color: #e74c3c; color: white; border: none; padding: 12px; border-radius: 8px; font-size: 1rem; cursor: pointer; width: 100%; font-weight: bold;">إرجاع الكتاب</button>
-      </div>
+    <div class="loan-card">
+      <div class="book-title">لأنك الله (الجزء الأول والثاني)</div>
+      <div class="book-author">المؤلف: علي جابر الفيفي</div>
+      <div class="return-date">تاريخ الإرجاع: 15 سبتمبر 2026</div>
+      <button class="btn-return">إرجاع الكتاب</button>
     </div>
   </main>
 
-  <footer class="footer">
+  <footer class="footer" style="text-align: center; padding: 1.5rem; color: #7A6855; font-size: 0.85rem;">
     <p>جميع الحقوق محفوظة &copy; 2026 - مكتبة رُفُوف</p>
   </footer>
 
 </body>
-</html>
-  
+  </html>
+          
