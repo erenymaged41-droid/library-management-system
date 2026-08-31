@@ -1,42 +1,125 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Library System - Catalog</title>
+  <title>كتالوج الكتب - مكتبة رُفُوف</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="container">
-    <h2>Library Catalog</h2>
-    
+  <!-- Navbar البيج الشامل -->
+  <nav class="navbar">
+    <div class="nav-container">
+      
+      <!-- اللوجو مدمج بانسجام مع الشريط البيج -->
+      <div class="logo">
+        <svg width="55" height="55" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- الدائرة خلف الرف -->
+          <circle cx="80" cy="70" r="45" fill="#E8DEC8"/>
+          
+          <!-- الرفوف الخشبية -->
+          <rect x="35" y="42" width="90" height="6" rx="3" fill="#8C533E"/>
+          <rect x="35" y="92" width="90" height="7" rx="3" fill="#8C533E"/>
+          
+          <!-- الكتب المرصوفة -->
+          <rect x="44" y="48" width="10" height="44" rx="2" fill="#B83B26"/>
+          <rect x="46" y="53" width="6" height="4" fill="#FFFFFF" opacity="0.6"/>
+          
+          <rect x="56" y="48" width="10" height="44" rx="2" fill="#2D7D56"/>
+          
+          <rect x="68" y="48" width="9" height="44" rx="2" fill="#E9C46A"/>
+          <rect x="70" y="68" width="5" height="4" fill="#8C533E"/>
+          
+          <rect x="79" y="48" width="9" height="44" rx="2" fill="#2A9D8F"/>
+          <rect x="81" y="55" width="5" height="5" fill="#FFFFFF"/>
+          
+          <rect x="90" y="48" width="10" height="44" rx="2" fill="#1D3557"/>
+          <rect x="92" y="62" width="6" height="3" fill="#E9C46A"/>
+          
+          <rect x="102" y="48" width="10" height="44" rx="2" fill="#E76F51"/>
+        </svg>
+
+        <div style="display: flex; flex-direction: column; align-items: flex-start; line-height: 1.1;">
+          <span style="color: #4A3525; font-weight: bold; font-size: 1.3rem;">رُفُوف</span>
+          <span style="color: #7A6855; font-size: 0.65rem; font-weight: 500;">مكتبتك في مكان واحد</span>
+        </div>
+      </div>
+      
+      <ul class="nav-links">
+        <li><a href="catalog.html">الكتالوج</a></li>
+        <li><a href="my_loans.html">استعاراتي</a></li>
+        <li><a href="signup.html">تسجيل الدخول</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="container">
+    <div class="catalog-header" style="text-align: center; margin-bottom: 1.5rem;">
+      <h2 style="color: #4A3525;">كتالوج الكتب المتاحة</h2>
+      <p style="color: #666; font-size: 0.95rem; margin-top: 5px;">"كل رف يحمل قصة، وكل قصة تنتظر قارئها"</p>
+    </div>
+
+    <!-- Search Section -->
     <div class="search-section">
-      <input type="text" id="searchInput" placeholder="Search by book title or author...">
+      <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="ابحث عن كتاب باسم العنوان أو اسم المؤلف..." 
+        autocomplete="off"
+      >
     </div>
 
-    <div id="booksGrid" class="books-grid">
+    <!-- Categories / الرفوف -->
+    <div class="categories-filter">
+      <button class="filter-btn active" data-category="all">الكل</button>
+      <button class="filter-btn" data-category="تنمية">تنمية وتزكية</button>
+      <button class="filter-btn" data-category="تاريخ">تاريخ وتراث</button>
+      <button class="filter-btn" data-category="أدب">أدب وروايات</button>
+    </div>
+
+    <!-- Grid Area -->
+    <div class="books-grid" id="booksGrid">
       <div class="book-card">
-        <h3 class="book-title">Clean Code</h3>
-        <p class="book-author">By Robert C. Martin</p>
-        <button class="borrow-btn">Borrow</button>
+        <div>
+          <h3 class="book-title">لأنك الله (الجزء الأول والثاني)</h3>
+          <p class="book-author">المؤلف: علي جابر الفيفي</p>
+        </div>
+        <button class="borrow-btn">استعارة</button>
       </div>
 
       <div class="book-card">
-        <h3 class="book-title">The Pragmatic Programmer</h3>
-        <p class="book-author">By Andrew Hunt</p>
-        <button class="borrow-btn">Borrow</button>
+        <div>
+          <h3 class="book-title">الطب النبوي</h3>
+          <p class="book-author">المؤلف: ابن القيم</p>
+        </div>
+        <button class="borrow-btn">استعارة</button>
       </div>
 
       <div class="book-card">
-        <h3 class="book-title">JavaScript: The Good Parts</h3>
-        <p class="book-author">By Douglas Crockford</p>
-        <button class="borrow-btn">Borrow</button>
+        <div>
+          <h3 class="book-title">لكنود</h3>
+          <p class="book-author">المؤلف: إسلام جمال</p>
+        </div>
+        <button class="borrow-btn">استعارة</button>
+      </div>
+
+      <div class="book-card">
+        <div>
+          <h3 class="book-title">زاد</h3>
+          <p class="book-author">المؤلف: إسلام جمال</p>
+        </div>
+        <button class="borrow-btn">استعارة</button>
       </div>
     </div>
-  </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>جميع الحقوق محفوظة &copy; 2026 - مكتبة رُفُوف</p>
+  </footer>
 
   <script src="main.js"></script>
 </body>
-                                             </html>
-                                             
+            </html>
